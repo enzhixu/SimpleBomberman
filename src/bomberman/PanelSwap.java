@@ -19,9 +19,9 @@ public class PanelSwap extends JPanel implements ActionListener {
 
 
     
-    JButton swap1 = new JButton("簡單"); 
-    JButton swap2 = new JButton("中等");
-    JButton swap3 = new JButton("困難");
+    JButton swap1 = new JButton("Easy");
+    JButton swap2 = new JButton("Medium");
+    JButton swap3 = new JButton("Hard");
     JButton swapFinish = new JButton("Main menu");  
    
     JPanel firstPanel = new bomberman.ChoiceInterface((1+B_WIDTH)*B_STEP, (1+B_HEIGHT)*B_STEP);
@@ -46,12 +46,18 @@ public class PanelSwap extends JPanel implements ActionListener {
         
       //swap2.addActionListener(this);
         //secondPanel.setBackground(Color.YELLOW);
-        note0 = new JTextArea("請選擇遊戲難度開始遊戲");
+        note0 = new JTextArea("Please choose difficulty to start game"); //請選擇遊戲難度開始遊戲
         note0.setFont(new Font("MingLiU", Font.PLAIN, 60));
         note0.setLineWrap(true);
         note0.setBackground(Color.ORANGE);
         
-        note = new JTextArea("說明：按上下左右鍵移動，按空格鍵放置炸彈，按A鍵引爆炸彈，否則炸彈將於4秒鐘後自動爆炸。敵人全部炸死則戰鬥勝利。\n無敵狀態時間：簡單，"+EASY_INVINCIBLE_TIME/1000+"秒；中等，"+MIDIUM_INVINCIBLE_TIME/1000+"秒；困難，"+HARD_INVINCIBLE_TIME/1000+"秒。");
+        note = new JTextArea("Instruction: press arrows to move, space button to place a bomb, " +
+                "press A to improvise the bomb, otherwise the bomb will explode in 4 seconds. " +
+                "You will win victory after all the enemies are died. \nInvincible time: easy, " + EASY_INVINCIBLE_TIME / 1000 + "seconds; " +
+                "medium, " + MIDIUM_INVINCIBLE_TIME / 1000 + "seconds; " +
+                "hard," + HARD_INVINCIBLE_TIME / 1000 + "seconds");
+        //"說明：按上下左右鍵移動，按空格鍵放置炸彈，按A鍵引爆炸彈，否則炸彈將於4秒鐘後自動爆炸。" +
+        //"敵人全部炸死則戰鬥勝利。\n無敵狀態時間：簡單，"+EASY_INVINCIBLE_TIME/1000+"秒；中等，"+MIDIUM_INVINCIBLE_TIME/1000+"秒；困難，"+HARD_INVINCIBLE_TIME/1000+"秒。");
         note.setFont(new Font("MingLiU", Font.PLAIN, 60));
         note.setLineWrap(true);
         note.setBackground(Color.ORANGE);
